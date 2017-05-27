@@ -7,8 +7,20 @@
  *                            between 1 and `ceiling`
  */
 module.exports = function( ceiling ) {
-  // do work here
+  var number = 20
 
+  function findTheNumber(){
+    for(var i = 1; i <= ceiling; i++){
+      if(number % i !== 0){
+        return false;
+      }
+    }
+    // return true;
+  }
+  while(findTheNumber() == false){
+    number += 1;
+    // console.log(number);
+  }
+  return number;
 
-  return 0;
 };
